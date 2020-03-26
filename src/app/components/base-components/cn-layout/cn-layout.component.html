@@ -1,0 +1,43 @@
+<nz-layout>
+    <nz-content>
+      <ng-container *ngIf="config.rows">
+        <div nz-row [nzGutter]="6" *ngFor="let row of config.rows">
+  
+          <div nz-col *ngFor="let c of row.cols" [nzSpan]="c.span" [nzSm]="c.size.nzSm" [nzXs]="c.size.nzXs"
+            [nzMd]="c.size.nzMd" [nzLg]="c.size.nzLg" [nzXl]="c.size.nzXl" [nzXXl]="c.size.nzXXL"
+            [ngSwitch]="c.container">
+  
+  
+  
+            <ng-container *ngSwitchCase="'pageHeader'" CnLayoutDirective [config]="c.pageHeader"
+              [tempData]="tempData" [initData]="initData"></ng-container>
+  
+            <nz-card *ngSwitchCase="'tabs'">
+              <ng-container CnLayoutDirective [config]="c.tabs" [tempData]="tempData" [initData]="initData">
+              </ng-container>
+            </nz-card>
+  
+  
+            <ng-container *ngSwitchCase="'layout'" CnLayoutDirective [config]="c.layout" [tempData]="tempData"
+              [initData]="initData">
+            </ng-container>
+  
+  
+            <nz-card *ngSwitchCase="'component'" [nzBodyStyle]="c.bodyStyle" [nzBordered]="c.noBorder ? false : true"
+              [nzTitle]="c.title ? c.title : false">
+              <ng-container CnComponentDirective [config]="c.component" [tempData]="tempData"
+                [initData]="initData"> </ng-container>
+            </nz-card>
+
+            <ng-container *ngSwitchCase="'rows'" CnLayoutDirective [config]="c" [tempData]="tempData"
+              [initData]="initData">
+            </ng-container>
+  
+            <!-- <nz-card [ngSwitch]="c.container" >
+              
+            </nz-card> -->
+          </div>
+        </div>
+      </ng-container>
+    </nz-content>
+  </nz-layout>
