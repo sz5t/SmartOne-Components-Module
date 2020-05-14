@@ -26,6 +26,10 @@ import { CnGridSwitchComponent } from './cn-data-table/cn-data-table-items/cn-gr
 import { CnGridInputComponent } from './cn-data-table/cn-data-table-items/cn-grid-input/cn-grid-input.component';
 import { CnGridSelectComponent } from './cn-data-table/cn-data-table-items/cn-grid-select/cn-grid-select.component';
 import { CnGridTagComponent } from './cn-data-table/cn-data-table-items/cn-grid-tag/cn-grid-tag.component';
+import { CnBarchartComponent } from './cn-charts/cn-barchart/cn-barchart.component';
+import { CnHorizontalBarchartComponent } from './cn-charts/cn-horizontal-barchart/cn-horizontal-barchart.component';
+import { CnBrokenLineChartComponent } from './cn-charts/cn-broken-line-chart/cn-broken-line-chart.component';
+import { CnFanChartComponent } from './cn-charts/cn-fan-chart/cn-fan-chart.component';
 
 const COMPONENTS = [
   CnDataTableComponent, 
@@ -58,7 +62,12 @@ const COMPONENTS = [
   CnGridTextareaComponent,
   CnGridInputComponent,
   CnGridSelectComponent,
-  CnGridTagComponent
+  CnGridTagComponent,
+  // chart组件
+  CnBarchartComponent, 
+  CnHorizontalBarchartComponent, 
+  CnBrokenLineChartComponent, 
+  CnFanChartComponent
 ]
 
 const DIRECTIVES = [

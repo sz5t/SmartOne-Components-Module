@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   useHash: false,
   LOCAL_URL: './',
-  // SERVER_URL: 'http://39.101.168.200:8201/'
-  SERVER_URL: 'http://39.101.168.200:8880/'
+  SERVER_URL: 'http://39.101.168.200:8201/'
+  // SERVER_URL: 'http://39.101.168.200:8880/'
 };
 
 /*

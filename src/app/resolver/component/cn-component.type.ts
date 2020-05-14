@@ -3,10 +3,18 @@ import { Type } from "@angular/core";
 import { CnDataTableComponent } from "src/app/components/base-components/cn-data-table/cn-data-table.component";
 
 import { CnToolbarComponent } from "src/app/components/base-components/cn-toolbar/cn-toolbar.component";
+import { CnBarchartComponent } from 'src/app/components/base-components/cn-charts/cn-barchart/cn-barchart.component';
+import { CnHorizontalBarchartComponent } from 'src/app/components/base-components/cn-charts/cn-horizontal-barchart/cn-horizontal-barchart.component';
+import { CnBrokenLineChartComponent } from 'src/app/components/base-components/cn-charts/cn-broken-line-chart/cn-broken-line-chart.component';
+import { CnFanChartComponent } from 'src/app/components/base-components/cn-charts/cn-fan-chart/cn-fan-chart.component';
 
 export const COMPONENT_TYPES: { [type: string]: Type<any> } = {
     cnDataTable: CnDataTableComponent,
     cnToolbar: CnToolbarComponent,
+    cnBarchart: CnBarchartComponent,
+    cnHorizontalBarchart: CnHorizontalBarchartComponent,
+    cnBrokenLineChart: CnBrokenLineChartComponent,
+    cnFanChart: CnFanChartComponent
     // form: CnDataFormComponent,
     // cnTree: CnTreeComponent,
     // cnTreeTable: CnTreeTableComponent,

@@ -3,6 +3,7 @@ import { RouterModule, Route } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataTableDemoComponent } from './data-table-demo/data-table-demo.component';
+import { BarchartDemoComponent } from './barchart-demo/barchart-demo.component';
 
 const router: Route[] = [
   {
@@ -10,12 +11,16 @@ const router: Route[] = [
   },
   {
     path: 'data-table-demo', component: DataTableDemoComponent
+  },
+  {
+    path: 'barchart-demo', component: BarchartDemoComponent
   }
 ]
 
 @NgModule({
   declarations: [
-    DataTableDemoComponent
+    DataTableDemoComponent,
+    BarchartDemoComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +28,8 @@ const router: Route[] = [
     RouterModule.forChild(router)
   ],
   exports:[
-    DataTableDemoComponent
+    DataTableDemoComponent,
+    BarchartDemoComponent
   ]
 })
 export class DemoModule { }
