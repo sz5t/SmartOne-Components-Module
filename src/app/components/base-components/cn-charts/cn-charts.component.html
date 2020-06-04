@@ -1,0 +1,8 @@
+<div nz-row [nzGutter]="24" *ngFor="let r of layoutRowsCfg">
+    <div nz-col [nzSpan]="c.span" [nzSm]="c.size.nzSm" [nzXs]="c.size.nzXs" [nzMd]="c.size.nzMd" [nzLg]="c.size.nzLg"
+      [nzXl]="c.size.nzXl" [nzXXl]="c.size.nzXXl" *ngFor="let c of r.cols"
+      [ngStyle]="{'display': c.display ? c.display : null}">
+      <ng-container CnChartsDirective [config]="chartObj[c.control.id]">
+      </ng-container>
+    </div>
+  </div>

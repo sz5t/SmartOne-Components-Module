@@ -14,6 +14,7 @@ import { CnGridRangePickerComponent } from './cn-grid-range-picker/cn-grid-range
 import { CnGridCustomSelectComponent } from './cn-grid-custom-select/cn-grid-custom-select.component';
 import { CnGridCodeEditComponent } from './cn-grid-code-edit/cn-grid-code-edit.component';
 import { CnGridTextareaComponent } from './cn-grid-textarea/cn-grid-textarea.component';
+import { CnGridChartsComponent } from './cn-grid-charts/cn-grid-charts.component';
 const components: { [type: string]: Type<any> } = {
   input: CnGridInputComponent,
   select: CnGridSelectComponent,
@@ -35,6 +36,7 @@ const components: { [type: string]: Type<any> } = {
   customSelect:  CnGridCustomSelectComponent,
   codeEdit:  CnGridCodeEditComponent,
   textarea:  CnGridTextareaComponent,
+  charts: CnGridChartsComponent
   // label: ,
   // selectMultiple:,
   // datePicker:,

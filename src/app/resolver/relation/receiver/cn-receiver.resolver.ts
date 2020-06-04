@@ -45,6 +45,9 @@ export class CnReceiverResolver implements ICnRelationResolver {
                                 case 'staticComponentValue':
                                     this._componentInstance.staticComponentValue[p.cname] = data.options[p.pname];
                                     break;
+                                case 'outputValue':
+                                    this._componentInstance.outputValue[p.cname] = data.options[p.pname];
+                                    break;
                             }
                         }
                     }

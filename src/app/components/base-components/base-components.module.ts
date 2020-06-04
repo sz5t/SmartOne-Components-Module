@@ -30,6 +30,11 @@ import { CnBarchartComponent } from './cn-charts/cn-barchart/cn-barchart.compone
 import { CnHorizontalBarchartComponent } from './cn-charts/cn-horizontal-barchart/cn-horizontal-barchart.component';
 import { CnBrokenLineChartComponent } from './cn-charts/cn-broken-line-chart/cn-broken-line-chart.component';
 import { CnFanChartComponent } from './cn-charts/cn-fan-chart/cn-fan-chart.component';
+import { CnTimeAxisChartComponent } from './cn-charts/cn-time-axis-chart/cn-time-axis-chart.component';
+import { CnMultipleYAxisChartComponent } from './cn-charts/cn-multiple-y-axis-chart/cn-multiple-y-axis-chart.component';
+import { CnChartsComponent } from './cn-charts/cn-charts.component';
+import { CnChartsDirective } from './cn-charts/cn-charts-directive.directive';
+import { CnGridChartsComponent } from './cn-data-table/cn-data-table-items/cn-grid-charts/cn-grid-charts.component';
 
 const COMPONENTS = [
   CnDataTableComponent, 
@@ -63,18 +68,23 @@ const COMPONENTS = [
   CnGridInputComponent,
   CnGridSelectComponent,
   CnGridTagComponent,
+  CnGridChartsComponent, 
   // chart组件
   CnBarchartComponent, 
   CnHorizontalBarchartComponent, 
   CnBrokenLineChartComponent, 
-  CnFanChartComponent
+  CnFanChartComponent, 
+  CnTimeAxisChartComponent, 
+  CnMultipleYAxisChartComponent, 
+  CnChartsComponent
 ]
 
 const DIRECTIVES = [
   CnLayoutDirective,
   CnComponentDirective,
   CnGridItemDirective,
-  DynamicLayoutDirective
+  DynamicLayoutDirective,
+  CnChartsDirective
 ]
 
 @NgModule({

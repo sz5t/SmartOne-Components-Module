@@ -85,7 +85,7 @@ export class CnOperationBase {
 
     public setDataState(state, dataOfState) {
         switch (state) {
-            case CN_DATA_TABLE_TRIGGER.EDIT_ROW:
+            case CN_DATA_TABLE_METHOD.EDIT_ROW:
                 dataOfState.state = 'edit';
                 // sendMsg.isSend = false;
                 break;

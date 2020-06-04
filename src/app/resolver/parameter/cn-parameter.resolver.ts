@@ -18,6 +18,7 @@ import { CnEditedRows } from './sub-parameters/cn-edited-rows.parameter';
 import { CnValidationParameter } from './sub-parameters/cn-validation.parameter';
 import { CnGUIDParameter } from './sub-parameters/cn-guid.parameter';
 import { CnCheckedRowParameter } from './sub-parameters/cn-checked-row.parameter';
+import { CnOutputValueParameter } from './sub-parameters/cn-output-value.parameter';
 
 export class CnParameterResolver {
     public static resolve(model: ICnParameterModel) {
@@ -110,6 +111,11 @@ export class CnParameterResolver {
     private static returnValue(param, model) {
       // tslint:disable-next-line: no-use-before-declare
       return new CnReturnValueParameter(param, model).buildParameter();
+    }
+
+    private static outputValue(param, model) {
+      // tslint:disable-next-line: no-use-before-declare
+      return new CnOutputValueParameter(param, model).buildParameter();
     }
 
     private static defaultWeek(param, model) {

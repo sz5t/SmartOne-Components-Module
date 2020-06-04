@@ -15,6 +15,7 @@ export interface ICnParameterModel {
   editedRows?: any[];
   validation?: any[];
   checkedItem?: any;
+  outputValue?: any;
 }
 
 export interface ICnParameterResolver {

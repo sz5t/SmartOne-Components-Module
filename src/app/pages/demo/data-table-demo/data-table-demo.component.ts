@@ -4231,7 +4231,1236 @@ export class DataTableDemoComponent implements OnInit {
                                 }
                             ]
                         }
-                    }],
+                    },
+                    {
+                        "id": "r5zDHB2-2",
+                        "col": "cc",
+                        "type": "col",
+                        "title": "",
+                        "span": 24,
+                        "container": "component",
+                        "size": {
+                            "nzXs": 24,
+                            "nzSm": 24,
+                            "nzMd": 24,
+                            "nzLg": 24,
+                            "nzXl": 24,
+                            "nzXXl": 24
+                        },
+                        "component": {
+                            "id": "view_02",
+                            "title": "行内图表测试表",
+                            "titleIcon": "right-circle",
+                            "component": "cnDataTable",
+                            "keyId": "RN",
+                            "size": "middle",
+                            "isBordered": true,
+                            "isFrontPagination": false,
+                            "isPagination": true,
+                            "isShowSizeChanger": true,
+                            "showTotal": true,
+                            "pageSize": 5,
+                            "showCheckBox": true,
+                            "pageSizeOptions": [10, 20, 50, 100],
+                            "loadingOnInit": true,
+                            "loadingConfig": {
+                                "url": "resource/GET_BAR_CHART_DATA/query",
+                                "method": "get",
+                                "params": [
+                                    {
+                                        "name": "_sort",
+                                        "type": "value",
+                                        "value": "VALUE DESC"
+                                    },
+                                    {
+                                        "name": "NAME_PERCENT",
+                                        "type": "value",
+                                        "value": "ne()"
+                                    }
+                                ],
+                                "filter": [
+
+                                ]
+                            },
+                            "columns": [
+                                {
+                                    "title": "id",
+                                    "type": "field",
+                                    "field": "ID",
+                                    "hidden": true,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "isShowExpand": false,
+                                    "width": "50px",
+                                    "style": {}
+                                },
+                                {
+                                    "title": "PID",
+                                    "type": "field",
+                                    "field": "PID",
+                                    "hidden": true,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "isShowExpand": false,
+                                    "width": "50px",
+                                    "style": {}
+                                },
+                                {
+                                    "title": "姓名",
+                                    "type": "field",
+                                    "field": "NAME",
+                                    "hidden": false,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "width": "100px",
+                                    "style": {},
+                                },
+                                {
+                                    "title": "值",
+                                    "type": "field",
+                                    "field": "VALUE",
+                                    "hidden": false,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "width": "200px",
+                                    "style": {},
+                                    "custom": {
+                                        "type": "charts",
+                                        "field": "VALUE",
+                                        "haveNegative":false,
+                                        "chartType": "singlebarchart",
+                                        "BasiAttribute": {
+                                            "max": 100,
+                                            "min": 0
+                                        },
+                                        "format": {
+                                            'colorRuleField': "VALUE",
+                                            "greaterValue": 94,
+                                            "greaterColor": "#66CC00", // 超过是绿色
+                                            "lessValue": 90,
+                                            "lessColor": "#FF0033", // 未达到是红色
+                                            "defaultColor": "#0066FF", // 默认颜色
+                                            "afterText": "万",
+                                            "beforeText": "共"
+                                        }
+                                    }
+                                },
+                                {
+                                    "title": "正负值",
+                                    "type": "field",
+                                    "field": "VALUE",
+                                    "hidden": false,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "width": "200px",
+                                    "style": {},
+                                    "custom": {
+                                        "type": "charts",
+                                        "field": "VALUE",
+                                        "haveNegative":true,
+                                        "chartType": "singlebarchart",
+                                        "BasiAttribute": {
+                                            "max": 100,
+                                            "min": -100
+                                        },
+                                        "format": {
+                                            'colorRuleField': "VALUE",
+                                            "greaterValue": 94,
+                                            "greaterColor": "#66CC00", // 超过是绿色
+                                            "lessValue": 90,
+                                            "lessColor": "#FF0033", // 未达到是红色
+                                            "defaultColor": "#0066FF", // 默认颜色
+                                            "afterText": "万",
+                                            "beforeText": "共"
+                                        }
+                                    }
+                                },
+                                {
+                                    "title": "折线图",
+                                    "type": "field",
+                                    "field": "tu",
+                                    "hidden": false,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "width": "200px",
+                                    "style": {},
+                                    "custom": {
+                                        "type": "charts",
+                                        "chartType": "brokenlinechart",
+                                        "ajaxConfig": {
+                                            "url": "resource/GET_GRID_CHART_DATA/query",
+                                            "method": "get",
+                                            "params": [
+                                                {
+                                                    "name": "_sort",
+                                                    "type": "value",
+                                                    "value": "X_VALUE ASC"
+                                                },
+                                                {
+                                                    "name": "LEFT_ID",
+                                                    "type": "initValue",
+                                                    "valueName": "RN"
+                                                }
+                                            ],
+                                            "filter": []
+                                        },
+                                        "BasiAttribute": {
+                                            "x": "X_VALUE",
+                                            "y": "Y_VALUE"
+                                        },
+                                        "format": {
+                                        }
+                                    }
+                                },
+                                {
+                                    "title": "柱状图",
+                                    "type": "field",
+                                    "field": "tu2",
+                                    "hidden": false,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "width": "200px",
+                                    "style": {},
+                                    "custom": {
+                                        "type": "charts",
+                                        "chartType": "barchart",
+                                        "ajaxConfig": {
+                                            "url": "resource/GET_GRID_CHART_DATA/query",
+                                            "method": "get",
+                                            "params": [
+                                                {
+                                                    "name": "_sort",
+                                                    "type": "value",
+                                                    "value": "X_VALUE ASC"
+                                                },
+                                                {
+                                                    "name": "LEFT_ID",
+                                                    "type": "initValue",
+                                                    "valueName": "RN"
+                                                }
+                                            ],
+                                            "filter": []
+                                        },
+                                        "BasiAttribute": {
+                                            "x": "X_VALUE",
+                                            "y": "Y_VALUE"
+                                        },
+                                        "format": {
+                                        }
+                                    }
+                                },
+                                {
+                                    "title": "有比例的条形图",
+                                    "type": "field",
+                                    "field": "tu3",
+                                    "hidden": false,
+                                    "showFilter": false,
+                                    "showSort": false,
+                                    "width": "200px",
+                                    "style": {},
+                                    "custom": {
+                                        "type": "charts",
+                                        "chartType": "ratiobarchart",
+                                        "ajaxConfig": {
+                                            "url": "resource/CHART_GRID_RATIO_DATA/query",
+                                            "method": "get",
+                                            "params": [
+                                                {
+                                                    "name": "_sort",
+                                                    "type": "value",
+                                                    "value": "VALUE_TYPE ASC"
+                                                },
+                                                {
+                                                    "name": "LEFT_ID",
+                                                    "type": "initValue",
+                                                    "valueName": "RN"
+                                                }
+                                            ],
+                                            "filter": []
+                                        },
+                                        "BasiAttribute": {
+                                            "x": "X_VALUE",
+                                            "y": "Y_VALUE",
+                                            "type":"VALUE_TYPE",
+                                            "index":"RN"
+                                        },
+                                        "format": {
+                                        }
+                                    }
+                                },
+                                {
+                                    "title": "ACTION",
+                                    "type": "action",
+                                    // "width": "150px",
+                                    "actionIds": [
+                                        "city_new_row", "city_cancel_new_row", "city_edit", "city_save", "city_cancel", "city_delete"
+                                    ]
+                                }
+                            ],
+                            "rowActions": [
+                                {
+                                    "id": "city_new_row",
+                                    "state": "new",
+                                    "text": "保存",
+                                    "icon": "save",
+                                    "color": "text-primary",
+                                    "type": "link",
+                                    "size": "small",
+                                    "hidden": false,
+                                    "execute": [
+                                        {
+                                            "triggerType": "OPERATION",
+                                            "trigger": "SAVE_ROW",
+                                            "ajaxId": "add_city_1",
+                                            // "stateId": "add_save_1",
+                                            // "conditionId": "add_save_1"
+                                        }
+                                    ],
+                                    "toggle": {
+                                        "type": "state",
+                                        "toggleProperty": "hidden",
+                                        "values": [
+                                            {
+                                                "name": "new",
+                                                "value": false
+                                            },
+                                            {
+                                                "name": "text",
+                                                "value": true
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "city_cancel_new_row",
+                                    "state": "new",
+                                    "text": "取消",
+                                    "icon": "rollback",
+                                    "color": "text-primary",
+                                    "type": "link",
+                                    "size": "small",
+                                    "hidden": false,
+                                    "execute": [
+                                        {
+                                            "triggerType": "STATE",
+                                            "trigger": "CANCEL_NEW_ROW",
+                                            // "ajaxId": "add_save_1",
+                                            // "stateId": "add_save_1",
+                                            // "conditionId": "add_save_1"
+                                        }
+                                    ],
+                                    "toggle": {
+                                        "type": "state",
+                                        "toggleProperty": "hidden",
+                                        "values": [
+                                            {
+                                                "name": "new",
+                                                "value": false
+                                            },
+                                            {
+                                                "name": "text",
+                                                "value": true
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "city_edit",
+                                    "state": "text",
+                                    "text": "编辑",
+                                    "icon": "save",
+                                    "color": "text-primary",
+                                    "type": "link",
+                                    "size": "small",
+                                    "hidden": false,
+                                    "execute": [
+                                        {
+                                            "triggerType": "STATE",
+                                            "trigger": "EDIT_ROW"
+                                        }
+                                    ],
+                                    "toggle": {
+                                        "type": "state",
+                                        "toggleProperty": "hidden",
+                                        "values": [
+                                            {
+                                                "name": "edit",
+                                                "value": true
+                                            },
+                                            {
+                                                "name": "text",
+                                                "value": false
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "city_save",
+                                    "text": "保存",
+                                    "state": "text",
+                                    "icon": "save",
+                                    "color": "text-primary",
+                                    "type": "link",
+                                    "size": "small",
+                                    "hidden": true,
+                                    "execute": [
+                                        {
+                                            "triggerType": "OPERATION",
+                                            "trigger": "SAVE_ROW",
+                                            "ajaxId": "edit_city_1",
+                                            // "stateId": "add_save_1",
+                                            // "conditionId": "add_save_1"
+                                        }
+                                    ],
+                                    "toggle": {
+                                        "type": "state",
+                                        "toggleProperty": "hidden",
+                                        "values": [
+                                            {
+                                                "name": "edit",
+                                                "value": false
+                                            },
+                                            {
+                                                "name": "text",
+                                                "value": true
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "city_cancel",
+                                    "state": "text",
+                                    "text": "取消",
+                                    "icon": "rollback",
+                                    "color": "text-primary",
+                                    "type": "link",
+                                    "size": "small",
+                                    "hidden": true,
+                                    "execute": [
+                                        {
+                                            "triggerType": "STATE",
+                                            "trigger": "CANCEL_EDIT_ROW"
+                                        }
+                                    ],
+                                    "toggle": {
+                                        "type": "state",
+                                        "toggleProperty": "hidden",
+                                        "values": [
+                                            {
+                                                "name": "edit",
+                                                "value": false
+                                            },
+                                            {
+                                                "name": "text",
+                                                "value": true
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "id": "city_delete",
+                                    "text": "删除",
+                                    "state": "text",
+                                    "icon": "delete",
+                                    "type": "link",
+                                    "color": "primary",
+                                    "size": "small",
+                                    "hidden": false,
+                                    "execute": [
+                                        {
+                                            "triggerType": "OPERATION",
+                                            "trigger": "EXECUTE_SELECTED_ROW",
+                                            // "conditionId": "delete_operation_1",
+                                            "ajaxId": "city_delete_1"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "cascade": {
+                                "messageSender": [
+                                    {
+                                        "id": "view2_sender_1",
+                                        "senderId": "view_02",
+                                        "triggerType": "OPERATION",
+                                        "trigger": "SAVE_ROW",
+                                        "triggerMoment": "asyncAfter",
+                                        "sendData": [
+                                            {
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "STATE",
+                                                "receiverTrigger": "STATE_TO_TEXT",
+                                                "params": [
+                                                    {
+                                                        "name": "targetViewId",
+                                                        "value": "view_02",
+                                                        "type": "value"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "view2_sender_2",
+                                        "senderId": "view_02",
+                                        "triggerType": "OPERATION",
+                                        "trigger": "SAVE_ROWS",
+                                        "triggerMoment": "asyncAfter",
+                                        "sendData": [
+                                            {
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "STATE",
+                                                "receiverTrigger": "STATE_TO_TEXT",
+                                                "params": [
+                                                    {
+                                                        "name": "targetViewId",
+                                                        "value": "view_02",
+                                                        "type": "value"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "view2_sender_3",
+                                        "senderId": "view_02",
+                                        "triggerType": "STATE",
+                                        "trigger": "CANCEL_EDIT_ROW",
+                                        "triggerMoment": "after",
+                                        "sendData": [
+                                            {
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "STATE",
+                                                "receiverTrigger": "STATE_TO_TEXT",
+                                                "conditionId": "cancel_edit_cities",
+                                                "params": [
+                                                    {
+                                                        "name": "targetViewId",
+                                                        "value": "view_02",
+                                                        "type": "value"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "view2_sender_04",
+                                        "senderId": "view_02",
+                                        "triggerType": "STATE",
+                                        "trigger": "CANCEL_NEW_ROW",
+                                        "triggerMoment": "after",
+                                        "sendData": [
+                                            {
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "STATE",
+                                                "receiverTrigger": "STATE_TO_TEXT",
+                                                "conditionId": "cancel_add_cities",
+                                                "params": [
+                                                    {
+                                                        "name": "targetViewId",
+                                                        "value": "view_02",
+                                                        "type": "value"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "grid_sender_05",
+                                        "senderId": "view_02",
+                                        "triggerType": "STATE",
+                                        "trigger": "EDIT_ROW",
+                                        "triggerMoment": "after",
+                                        "sendData": [
+                                            {
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "STATE",
+                                                "receiverTrigger": "STATE_TO_EDIT",
+                                                "params": [
+                                                    {
+                                                        "name": "targetViewId",
+                                                        "value": "view_02",
+                                                        "type": "value"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "grid_sender_08",
+                                        "senderId": "view_02",
+                                        "triggerType": "ACTION",
+                                        "trigger": "CONFIRM",
+                                        "triggerMoment": "after",
+                                        "sendData": [
+                                            {
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "STATE",
+                                                "receiverTrigger": "STATE_TO_TEXT",
+                                                "params": [
+                                                    {
+                                                        "name": "targetViewId",
+                                                        "value": "view_01",
+                                                        "type": "value"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "afterCitySaveSuccessfully",
+                                        "senderId": "view_02",
+                                        // "triggerType": "ACTION",
+                                        // "trigger": "MESSAGE0",
+                                        // "triggerMoment": "after",
+                                        "sendData": [
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "MESSAGE",
+                                                "params": [
+                                                    {
+                                                        "name": "type",
+                                                        "type": "value",
+                                                        "value": "success"
+                                                    },
+                                                    {
+                                                        "name": "message",
+                                                        "type": "value",
+                                                        "value": "操作完成!"
+                                                    },
+                                                ]
+                                            },
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "CHANGE_ADDED_ROWS_TO_TEXT",
+                                                "params": [
+                                                    {
+                                                        "name": "id",
+                                                        "type": "addedRows",
+                                                        "valueName": "id"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "afterCityUpdateSuccessfully",
+                                        "senderId": "view_02",
+                                        // "triggerType": "ACTION",
+                                        // "trigger": "MESSAGE0",
+                                        // "triggerMoment": "after",
+                                        "sendData": [
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "MESSAGE",
+                                                "params": [
+                                                    {
+                                                        "name": "type",
+                                                        "type": "value",
+                                                        "value": "success"
+                                                    },
+                                                    {
+                                                        "name": "message",
+                                                        "type": "value",
+                                                        "value": "操作完成!"
+                                                    },
+                                                ]
+                                            },
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "CHANGE_EDITED_ROWS_TO_TEXT",
+                                                "params": [
+                                                    {
+                                                        "name": "id",
+                                                        "type": "editedRows",
+                                                        "valueName": "id"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "afterCitySaveValidation",
+                                        "senderId": "view_02",
+                                        "sendData": [
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "SHOW_INVALIDATE_ADDED_ROWS"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "afterCityUpdateValidation",
+                                        "senderId": "view_02",
+                                        "sendData": [
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "SHOW_INVALIDATE_EDITED_ROWS"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "afterCityUpdateFormSuccessfully",
+                                        "senderId": "view_02",
+                                        // "triggerType": "ACTION",
+                                        // "trigger": "MESSAGE0",
+                                        // "triggerMoment": "after",
+                                        "sendData": [
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "MESSAGE",
+                                                "params": [
+                                                    {
+                                                        "name": "type",
+                                                        "type": "value",
+                                                        "value": "success"
+                                                    },
+                                                    {
+                                                        "name": "code",
+                                                        "type": "value",
+                                                        "value": "operation..code.success"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "LOAD_REFRESH_DATA",
+                                                "params": [
+                                                    {
+                                                        "name": "id",
+                                                        "type": "addedRows",
+                                                        "valueName": "id"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "afterCityUpdateFormValidation",
+                                        "senderId": "view_02",
+                                        "sendData": [
+                                            {
+                                                "beforeSend": {},
+                                                "reveicerId": "",
+                                                "receiverTriggerType": "ACTION",
+                                                "receiverTrigger": "MESSAGE",
+                                                "params": [
+                                                    {
+                                                        "name": "type",
+                                                        "type": "value",
+                                                        "value": "warning"
+                                                    },
+                                                    {
+                                                        "name": "message",
+                                                        "type": "validation",
+                                                        "valueName": "code"
+                                                    },
+                                                    {
+                                                        "name": "field",
+                                                        "type": "validation",
+                                                        "valueName": "field"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                ],
+                                "messageReceiver": [
+                                    {
+                                        "id": "",
+                                        "senderId": "view_011",
+                                        "receiveData": [
+                                            {
+                                                "beforeReceive": [],
+                                                "triggerType": "BEHAVIOR",
+                                                "trigger": "REFRESH_AS_CHILD",
+                                                "params": [
+                                                    {
+                                                        "pname": "_PID",
+                                                        "cname": "_PID",
+                                                        "valueTo": "tempValue"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "",
+                                        "senderId": "view_02",
+                                        "receiveData": [
+                                            {
+                                                "beforeReceive": [],
+                                                "triggerType": "ACTION",
+                                                "trigger": "MESSAGE"
+                                                // "params": [
+                                                //     {
+                                                //         "pname": "name",
+                                                //         "cname": "_PID",
+                                                //         "valueTo": "tempValue"
+                                                //     }
+                                                // ]
+                                            },
+                                            {
+                                                "beforeReceive": [],
+                                                "triggerType": "ACTION",
+                                                "trigger": "CHANGE_ADDED_ROWS_TO_TEXT"
+                                                // "params": [
+                                                //     {
+                                                //         "pname": "name",
+                                                //         "cname": "_PID",
+                                                //         "valueTo": "tempValue"
+                                                //     }
+                                                // ]
+                                            },
+                                            {
+                                                "beforeReceive": [],
+                                                "triggerType": "ACTION",
+                                                "trigger": "CHANGE_EDITED_ROWS_TO_TEXT"
+                                                // "params": [
+                                                //     {
+                                                //         "pname": "name",
+                                                //         "cname": "_PID",
+                                                //         "valueTo": "tempValue"
+                                                //     }
+                                                // ]
+                                            },
+                                            {
+                                                "beforeReceive": [],
+                                                "triggerType": "ACTION",
+                                                "trigger": "SHOW_INVALIDATE_ADDED_ROWS"
+                                            },
+                                            {
+                                                "beforeReceive": [],
+                                                "triggerType": "ACTION",
+                                                "trigger": "SHOW_INVALIDATE_EDITED_ROWS"
+                                            },
+                                            {
+                                                "beforeReceive": [],
+                                                "triggerType": "ACTION",
+                                                "trigger": "LOAD_REFRESH_DATA"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "condition": [
+                                {
+                                    "id": "add_cities_state",
+                                    "state": [
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_CHECKED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "gt"
+                                                },
+                                                {
+                                                    "type": "element",
+                                                    "name": "name",
+                                                    "matchValue": "1",
+                                                    "match": "eq",
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "edit_cities_state",
+                                    "state": [
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_CHECKED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "gt"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "add_cities",
+                                    "state": [
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_CHECKED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "gt"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_ADDED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "gt"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "edit_cities",
+                                    "state": [
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_EDITED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "gt"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_CHECKED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "gt"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "cancel_edit_cities",
+                                    "state": [
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_EDITED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "eq"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "cancel_add_cities",
+                                    "state": [
+                                        {
+                                            "type": "component",
+                                            "valueName": "ROWS_ADDED",
+                                            "expression": [
+                                                {
+                                                    "type": "property",
+                                                    "name": "length",
+                                                    "matchValue": 0,
+                                                    "match": "eq"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+
+                            ],
+                            "ajaxConfig": [
+                                {
+                                    "id": "add_city_1",
+                                    "url": "city/insert",
+                                    "urlType": "inner",
+                                    "ajaxType": "post",
+                                    "params": [
+                                        {
+                                            "name": "id",
+                                            "type": "componentValue",
+                                            "valueName": "id"
+                                        },
+                                        {
+                                            "name": "cityName",
+                                            "type": "componentValue",
+                                            "valueName": "cityName"
+                                        },
+                                        {
+                                            "name": "zipCode",
+                                            "type": "componentValue",
+                                            "valueName": "zipCode"
+                                        },
+                                        {
+                                            "name": "populationSize",
+                                            "type": "componentValue",
+                                            "valueName": "populationSize"
+                                        },
+                                        {
+                                            "name": "directlyUnder",
+                                            "type": "componentValue",
+                                            "valueName": "directlyUnder"
+                                        },
+                                        {
+                                            "name": "createDate",
+                                            "type": "componentValue",
+                                            "valueName": "createDate"
+                                        },
+                                        {
+                                            "name": "pId",
+                                            "type": "tempValue",
+                                            "valueName": "_PID"
+                                        }
+                                    ],
+                                    "outputParameters": [
+
+                                    ],
+                                    "result": [
+                                        {
+                                            "name": "data",
+                                            "showMessageWithNext": 0,
+                                            "message": "message.ajax.state.success",
+                                            "senderId": "afterCitySaveSuccessfully"
+                                        },
+                                        {
+                                            "name": "validation",
+                                            "showMessageWithNext": 0,
+                                            "message": "message.ajax.state.success",
+                                            "senderId": "afterCitySaveValidation"
+                                        },
+                                        // {
+                                        //     "name": "error",
+                                        //     "senderId": "grid_sender_03"
+                                        // }
+                                    ]
+                                },
+                                {
+                                    "id": "edit_city_1",
+                                    "url": "city/update",
+                                    "urlType": "inner",
+                                    "ajaxType": "put",
+                                    "params": [
+                                        {
+                                            "name": "cityName",
+                                            "type": "componentValue",
+                                            "valueName": "cityName"
+                                        },
+                                        {
+                                            "name": "zipCode",
+                                            "type": "componentValue",
+                                            "valueName": "zipCode"
+                                        },
+                                        {
+                                            "name": "populationSize",
+                                            "type": "componentValue",
+                                            "valueName": "populationSize"
+                                        },
+                                        {
+                                            "name": "directlyUnder",
+                                            "type": "componentValue",
+                                            "valueName": "directlyUnder"
+                                        },
+                                        {
+                                            "name": "createDate",
+                                            "type": "componentValue",
+                                            "valueName": "createDate"
+                                        },
+                                        {
+                                            "name": "pId",
+                                            "type": "tempValue",
+                                            "valueName": "_PID"
+                                        },
+                                        {
+                                            "name": "id",
+                                            "type": "componentValue",
+                                            "valueName": "id"
+                                        }
+                                    ],
+                                    "outputParameters": [
+
+                                    ],
+                                    "result": [
+                                        {
+                                            "name": "data",
+                                            "showMessageWithNext": 0,
+                                            "message": "message.ajax.state.success",
+                                            "senderId": "afterCityUpdateSuccessfully"
+                                        },
+                                        {
+                                            "name": "validation",
+                                            "showMessageWithNext": 0,
+                                            "message": "message.ajax.state.success",
+                                            "senderId": "afterCityUpdateValidation"
+                                        },
+                                        {
+                                            "name": "error",
+                                            "senderId": "toolbar_02"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "add_cities_1",
+                                    "url": "city/insertMany",
+                                    "urlType": "inner",
+                                    "ajaxType": "post",
+                                    "params": [
+                                        {
+                                            "name": "id",
+                                            "type": "componentValue",
+                                            "valueName": "id"
+                                        },
+                                        {
+                                            "name": "cityName",
+                                            "type": "componentValue",
+                                            "valueName": "cityName"
+                                        },
+                                        {
+                                            "name": "zipCode",
+                                            "type": "componentValue",
+                                            "valueName": "zipCode"
+                                        },
+                                        {
+                                            "name": "populationSize",
+                                            "type": "componentValue",
+                                            "valueName": "populationSize"
+                                        },
+                                        {
+                                            "name": "directlyUnder",
+                                            "type": "componentValue",
+                                            "valueName": "directlyUnder"
+                                        },
+                                        {
+                                            "name": "createDate",
+                                            "type": "componentValue",
+                                            "valueName": "createDate"
+                                        },
+                                        {
+                                            "name": "pId",
+                                            "type": "tempValue",
+                                            "valueName": "_PID"
+                                        }
+                                    ],
+                                    "outputParameters": [
+
+                                    ],
+                                    "result": [
+                                        {
+                                            "name": "data",
+                                            "showMessageWithNext": 0,
+                                            "message": "message.ajax.state.success",
+                                            "senderId": "grid_sender_01"
+                                        },
+                                        // {
+                                        //     "name": "validation",
+                                        //     "senderId": "grid_sender_02"
+                                        // },
+                                        // {
+                                        //     "name": "error",
+                                        //     "senderId": "grid_sender_03"
+                                        // }
+                                    ]
+                                },
+                                {
+                                    "id": "edit_cities_1",
+                                    "url": "city/updateMany",
+                                    "urlType": "inner",
+                                    "ajaxType": "put",
+                                    "params": [
+                                        {
+                                            "name": "cityName",
+                                            "type": "componentValue",
+                                            "valueName": "cityName"
+                                        },
+                                        {
+                                            "name": "zipCode",
+                                            "type": "componentValue",
+                                            "valueName": "zipCode"
+                                        },
+                                        {
+                                            "name": "populationSize",
+                                            "type": "componentValue",
+                                            "valueName": "populationSize"
+                                        },
+                                        {
+                                            "name": "directlyUnder",
+                                            "type": "componentValue",
+                                            "valueName": "directlyUnder"
+                                        },
+                                        {
+                                            "name": "createDate",
+                                            "type": "componentValue",
+                                            "valueName": "createDate"
+                                        },
+                                        {
+                                            "name": "id",
+                                            "type": "componentValue",
+                                            "valueName": "id"
+                                        },
+                                        {
+                                            "name": "pId",
+                                            "type": "tempValue",
+                                            "valueName": "_PID"
+                                        }
+                                    ],
+                                    "outputParameters": [
+
+                                    ],
+                                    "result": [
+                                        {
+                                            "name": "data",
+                                            "showMessageWithNext": 0,
+                                            "message": "message.ajax.state.success",
+                                            "senderId": "grid_sender_01"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "city_delete_1",
+                                    "url": "city/delete",
+                                    "urlType": "inner",
+                                    "ajaxType": "delete",
+                                    "params": [
+                                        {
+                                            "name": "ids",
+                                            "type": "CHECKED_ROWS_ID",
+                                            "value": "_ids"
+                                        }
+                                    ],
+                                    "outputParameters": [
+
+                                    ],
+                                    "result": [
+
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
                 id: "3vlDRq",
                 type: "row"
             }
